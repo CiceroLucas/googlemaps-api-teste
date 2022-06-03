@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="assets/javascript/mapa.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <div id="form" class="card bg-dark">
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <div>
+                <input style="width: 95%;" type="text" class="form-control" placeholder="Informe um Nome:" id="nome" />
+            </div>
+            
+            <div>
+                <button type="button"  class="btn btn-primary" onclick="salvar()">Salvar</button>
+                <button type="button"  class="btn btn-primary" onclick="VerPonto()">Visualizar Pontos</button>
+                <button type="button"  class="btn btn-primary" onclick="removerPontos()">Remover Pontos</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>
